@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body {
+    max-width: 1400px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px ;
+    margin: 0 auto;
+    overflow: hidden;
+    font-family: 'Muli', sans-serif;
+}
+#app{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    gap: 20px;
+}
+.poster-item{
+    width: 70px;
+    height: 90%;
+    transition: .5s;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.poster-item .poster-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.poster-name{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.536) 0%, rgba(0,0,0,0) 100%);
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* click to image */
+.expand{
+    width: 100% !important;
+}
+.expand .poster-name{
+    transition: 1s .5s;
+    opacity: 1;
+    visibility: visible;
+    
+}
