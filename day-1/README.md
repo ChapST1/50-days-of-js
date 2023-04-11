@@ -2,6 +2,6 @@
 
 * ## Expanding Cards
 
- [Demo → ](https://chapst1.github.io/Rick-and-Morty-API/)
+ [Demo → ](https://chapst1.github.io/50-days-of-js/day-1/)
 
 ![Primer Diseno](./screenshot/1.png)
