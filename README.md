@@ -3,6 +3,6 @@
 
 |  #  | Project                                                                                                                     | Live Demo                                                                         |
 | :-: | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| 01  | [Expanding Cards](https://github.com/chapst1/50projects50days/day-1)                             | [Live Demo](https://50projects50days.com/projects/expanding-cards/)               |      |
+| 01  | [Expanding Cards](https://github.com/ChapST1/50-days-of-js/tree/master/day-1)                             | [Live Demo]()               |      |
 
 
