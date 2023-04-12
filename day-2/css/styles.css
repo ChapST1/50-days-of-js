@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
 :root{
     --progress : 0%;
 }
@@ -56,7 +58,8 @@ body {
     justify-content: center;
     border: 3px solid #e0e0e0;
     color: #999;
-
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
     transition: .5s;
 }
 
@@ -77,6 +80,7 @@ body {
     background-color: #3498db;
     color: #fff;
     transition: .5s;
+    font-family: 'Poppins', sans-serif;
 }
 
 .steps-buttons button:active{
