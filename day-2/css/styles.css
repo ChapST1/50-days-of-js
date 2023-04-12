@@ -1,0 +1,94 @@
+:root{
+    --progress : 0%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#app {
+    width: 400px;
+}
+.steps{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 5px 0;
+    position: relative;
+}
+ .steps::before, .steps::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -2;
+    background-color: #e0e0e0;
+    transition: .5s ease-in;
+}
+.steps::before{
+    width: var(--progress);
+    background-color: #3498db;
+    z-index: -1;
+}
+.steps__step{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #e0e0e0;
+    color: #999;
+
+    transition: .5s;
+}
+
+.steps-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 5px 0;
+    margin: 20px 0;
+    
+}
+.steps-buttons button{
+    padding: 10px 30px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    transition: .5s;
+}
+
+.steps-buttons button:active{
+    transform: scale(0.8);
+}
+/* click click */
+.active{
+    border: 3px solid #3498db;
+    color: #3498db;
+}
+
+.disabled{
+    border: 3px solid #e0e0e0;
+    opacity: .5;
+    cursor: not-allowed;
+}
