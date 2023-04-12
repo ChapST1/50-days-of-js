@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 20px;
+    background-color: #222;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* click click */
+.body-active {
+    overflow: hidden;
+}
+
+/* menu hamburguer */
+.menu {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #ff7979;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    padding: 45px 50px;
+    cursor: pointer;
+    z-index: 2000;
+    transition: 1s;
+    font-size: 30px;
+    color: #fff;
+}
+
+/* click menu */
+.body-active .menu {
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+/* main ( rotate ) */
+.main {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    transition: 1s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: top left;
+    z-index: 1000;
+}
+
+/* click click */
+.body-active .main {
+    transform: rotate(-20deg)
+}
+
+/* article main -> article child */
+.article {
+    width: 70%;
+    margin: 100px auto
+}
+
+.article>*:not(.article__title, .article__cite) {
+    margin: 10px 0;
+}
+
+.artcle__title {
+    font-size: 35px;
+    font-weight: 800;
+}
+
+.article__cite {
+    display: block;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.article__paragraph {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.article__subtitle {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.article__image {
+    width: 100%;
+}
+
+/* Navigation */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    z-index: 200;
+    padding-bottom: 100px;
+}
+
+.nav__ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav__li {
+    transform: translateX(-100%);
+}
+
+.nav__a,
+.nav__li i {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav__a:hover {
+    color: #aaa;
+}
+
+/* click click */
+.body-active .nav__li:nth-child(1) {
+    transform: translateX(30px);
+    transition: 1s;
+}
+
+.body-active .nav__li:nth-child(2) {
+    transform: translateX(40px);
+    transition: 1s 0.2s;
+}
+
+.body-active .nav__li:nth-child(3) {
+    transform: translateX(50px);
+    transition: 1s 0.4s;
+}
+
+.body-active .nav__li:nth-child(4) {
+    transform: translateX(60px);
+    transition: 1s 0.6s;
+}
