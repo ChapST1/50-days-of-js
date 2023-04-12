@@ -43,6 +43,7 @@ body {
     width: var(--progress);
     background-color: #3498db;
     z-index: -1;
+    transition: .2s ease-in;
 }
 .steps__step{
     width: 30px;

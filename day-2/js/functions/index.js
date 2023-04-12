@@ -1,4 +1,4 @@
-import { stepsContainer, steps, buttonNext, buttonPrev, enableStyles, disableStyles } from '../constants/index.js'
+import { stepsContainer, steps, buttonNext, buttonPrev, enableStyles, disableStyles, documentStyles } from '../constants/index.js'
 
 let iterator = 0
 
@@ -16,6 +16,7 @@ export function nextStep (event) {
   const isLastStep = iterator === steps.length - 1
   const allStepsButtons = document.querySelectorAll('.steps__step')
   const currentButton = event.target
+  const progress = ((stepsContainer.clientWidth) / (steps.length - 1) * iterator)
 
   if (!isFirstStep) {
     addStyles(buttonPrev, disableStyles)
@@ -26,7 +27,8 @@ export function nextStep (event) {
   }
 
   allStepsButtons[(iterator)].classList.add('active')
-
+  documentStyles.setProperty('--progress', `${progress}px`)
+  console.log(progress)
   // si el iterador es mayor al la longitud del array steps (desactiva el boton otra vez)
   if (iterator > allStepsButtons.length - 1) {
     addStyles(currentButton, enableStyles)
@@ -37,8 +39,8 @@ export function prevStep (event) {
   const currentButton = event.target
   const allStepsButtons = document.querySelectorAll('.steps__step')
   iterator--
+  const progress = ((stepsContainer.clientWidth) / (steps.length - 1) * iterator)
 
-  // si el iterador es menor al la longitud del array steps (desactiva el boton otra vez)
   if (iterator < 0) {
     iterator = 0
     addStyles(currentButton, enableStyles)
@@ -49,6 +51,7 @@ export function prevStep (event) {
     addStyles(currentButton, enableStyles)
   }
 
+  documentStyles.setProperty('--progress', `${progress}px`)
   currentButton.disabled = false
   addStyles(buttonNext, disableStyles)
   allStepsButtons[iterator + 1].classList.remove('active')
