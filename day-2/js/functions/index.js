@@ -5,7 +5,7 @@ let iterator = 0
 // Mostramos en pantalla los pasos que estan el el array steps
 export function showSteps (steps) {
   steps.map((step) => {
-    return stepsContainer.innerHTML += `<div class="steps__step"><span>${step}</span></div>`
+    return stepsContainer.innerHTML += `<div class="steps__step"><span>${step}</span></div>` // eslint-disable-line
   })
 }
 
