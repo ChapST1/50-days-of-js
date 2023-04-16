@@ -7,7 +7,7 @@
 }
 .main{
     width: 70%;
-    min-width: 100vh;
+    min-height: 100vh;
     margin: 0 auto;
     padding: 20px 0;
     display: flex;
@@ -45,4 +45,38 @@
 .item__show:nth-of-type(even){
     transform: translateX(0);
     opacity: 1;
+}
+@media (max-width: 600px) {
+    body {
+        width: 100%;
+    }
+
+    .main {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .title {
+        font-size: 19px;
+    }
+
+    .item {
+        width: 80%;
+        transform: translateX(100px);
+        font-size: 14px;
+    }
+
+    .item:nth-of-type(even) {
+        transform: translateX(-100px);
+    }
+
+    .item__show {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+    .item__show:nth-of-type(even) {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
