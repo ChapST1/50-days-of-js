@@ -8,6 +8,7 @@
 | 03  | [Rotating Navigation animation](https://github.com/ChapST1/50-days-of-js/tree/master/day-3)                             | [Live Demo](https://chapst1.github.io/50-days-of-js/day-3/)               |      |
 | 04  | [Hidden Search Widget](https://github.com/ChapST1/50-days-of-js/tree/master/day-4)                             | [Live Demo](https://chapst1.github.io/50-days-of-js/day-4/)               |      |
 | 05  | [Blurry Loading](https://github.com/ChapST1/50-days-of-js/tree/master/day-5)                             | [Live Demo](https://chapst1.github.io/50-days-of-js/day-5/)               |      |
+| 06  | [Scroll Animation](https://github.com/ChapST1/50-days-of-js/tree/master/day-6)                             | [Live Demo](https://chapst1.github.io/50-days-of-js/day-6/)               |      |
 
 
 
