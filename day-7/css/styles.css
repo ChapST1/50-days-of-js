@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    font-family: 'Poppins';
+}
+.main{
+    height: 100%;
+    display: flex;
+}
+.playstation,.xbox{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: 1s ease-in-out;
+}
+.playstation{
+    background: linear-gradient(#5754ecb3,#5754ecb3), url("https://50projects50days.com/projects/split-landing-page/ps.jpg");
+    background-size: cover;
+}
+.xbox{
+    background: linear-gradient(#2b2b2bcc,#2b2b2bcc), url("https://50projects50days.com/projects/split-landing-page/xbox.jpg");
+    background-size: cover;
+}
+
+.playstation__title,.xbox__title{
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+    white-space: nowrap;
+}
+.playstation__btn, .xbox__btn{
+    padding: 25px 90px;
+    background-color: transparent;
+    border: 4px solid #fff;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.playstation__btn:hover{
+    background-color: #5754ec;
+    border-color: #5754ec;
+}
+.xbox__btn:hover{
+    background-color: #1c7a1c;
+    border-color: #1c7a1c;
+}
+.playstation-active{
+    width:200%;
+}
+.xbox-active{
+    width:200%;
+}
+@media (max-width: 700px){
+    .playstation__title,.xbox__title{
+        font-size: 30px;
+    }
+    .playstation__btn,.xbox__btn{
+        border-width: 2px;
+        padding: 5px 20px;
+    }
+}
