@@ -60,10 +60,10 @@ body{
     border-color: #1c7a1c;
 }
 .playstation-active{
-    width:200%;
+    width:150%;
 }
 .xbox-active{
-    width:200%;
+    width:150%;
 }
 @media (max-width: 700px){
     .playstation__title,.xbox__title{
