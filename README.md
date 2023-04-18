@@ -10,6 +10,7 @@
 | 05  | [Blurry Loading](https://github.com/ChapST1/50-days-of-js/tree/master/day-5)                             | [Live Demo](https://chapst1.github.io/50-days-of-js/day-5/)               |      |
 | 06  | [Scroll Animation](https://github.com/ChapST1/50-days-of-js/tree/master/day-6)                             | [Live Demo](https://chapst1.github.io/50-days-of-js/day-6/)               |      |
 | 07  | [Split Landing Page](https://github.com/ChapST1/50-days-of-js/tree/master/day-7)                             | [Live Demo](https://chapst1.github.io/50-days-of-js/day-7/)               |      |
+| 08  | [Form Wave](https://github.com/ChapST1/50-days-of-js/tree/master/day-8)                             | [Live Demo](https://chapst1.github.io/50-days-of-js/day-8/)               |      |
 
 
 
