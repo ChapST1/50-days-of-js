@@ -1,0 +1,70 @@
+:root{
+    --primary-100:#424874;
+    --primary-200:#A6B1E1;
+    --primary-300:#fdf6fd;
+    --accent-100:#D9ACF5;
+    --accent-200:#FFCEFE;
+    --text-100:#292524;
+    --text-200:#64748b;
+    --bg-100:#F4EEFF;
+    --bg-200:#DCD6F7;
+    --bg-300:#bbb9e9;
+      
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: var(--bg-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+#app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-press {
+    border: 2px solid var(--primary-100);
+    padding: 20px;
+    background-color: var(--bg-300);
+    color: var(--text-100);
+}
+
+.event-container {
+    width: 200px;
+    padding: 5px;
+}
+.event__title{
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-100);
+}
+.event__code{
+    display: block;
+    margin: 0 auto;
+    padding: 20px 40px;
+    margin: 10px 0;
+    text-align: center;
+    border: 2px solid var(--primary-200);
+    background-color: var(--bg-200);
+    color: var(--text-100);
+}

@@ -13,6 +13,7 @@
 | 08  | [Form Wave](https://github.com/ChapST1/50-days-of-js/tree/master/day-8)                             | [Live Demo](https://chapst1.github.io/50-days-of-js/day-8/)               |      |
 | 09  | [Sound Board](https://github.com/ChapST1/50-days-of-js/tree/master/day-9)                             | [Live Demo](https://chapst1.github.io/50-days-of-js/day-9/)               |      |
 | 10  | [Dad Jokes](https://github.com/ChapST1/50-days-of-js/tree/master/day-10)                             | [Live Demo](https://chapst1.github.io/50-days-of-js/day-10/)               |      |
+| 11  | [Event KeyCodes](https://github.com/ChapST1/50-days-of-js/tree/master/day-11)                             | [Live Demo](https://chapst1.github.io/50-days-of-js/day-11/)               |      |
 
 
 
