@@ -1,0 +1,78 @@
+:root {
+    --accent-100: #FF4081;
+    --text-100: #FFFFFF;
+    --text-200: #e0e0e0;
+    --bg-100: #282C34;
+    --bg-200: #383c44;
+    --bg-300: #50555e;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: var(--bg-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+#app {
+    width: 500px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: var(--bg-200);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border: 2px solid var(--accent-100);
+}
+#title{
+    color: var(--text-100);
+}
+
+#jokeContent {
+    text-align: center;
+    color: var(--text-200);
+}
+
+#btn {
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background-color: var(--accent-100);
+    color: var(--text-100);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+
+}
+#btn:active{
+    transform: scale(0.8);
+}
+#btn:hover{
+    background-color: var(--bg-300);
+}
+
+@media (max-width: 700px){
+    body{
+        padding: 0 20px;
+    }
+    #app{
+        width: 100%;
+    }
+}
