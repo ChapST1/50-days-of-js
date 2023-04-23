@@ -1,0 +1,90 @@
+:root {
+    
+    --primary-100:#FFD369;
+    --primary-200:#EEEEEE;
+    --primary-300:#fdf6fd;
+    --accent-100:#cfdbd5;
+    --accent-200:#e8eddf;
+    --text-100:#EEEEEE;
+    --text-200:#FDEBED;
+    --bg-100:#222831;
+    --bg-200:#393E46;
+    --bg-300:#292524;
+      
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-100);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#app{
+    width: 700px;
+}
+
+.app__title{
+    text-align: center;
+    color: var(--text-100);
+    font-size: 20px;
+}
+.app__area{
+    width: 100%;
+    height: 100px;
+    margin: 15px 0;
+    padding: 10px;
+    resize: none;
+    border-radius: 5px;
+    background-color: var(--bg-200);
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: var(--text-200);
+}
+.choices-container{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+
+.choice__input{
+    width: max-content;
+    background-color: var(--primary-100);
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+}
+.choice__input-active{
+    opacity: 1;
+    visibility: visible;
+}
+.choice{
+    width: max-content;
+    background-color: var(--bg-300);
+    padding: 10px;
+    border-radius: 5px;
+}
+.choice-active{
+    background-color: var(--accent-100);
+}
