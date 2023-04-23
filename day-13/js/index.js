@@ -4,6 +4,8 @@ const choicesContainer = document.querySelector('.choices-container')
 const choiceInput = document.querySelector('.choice__input')
 
 areaElement.addEventListener('keyup', (event) => {
+  if (event.target.value.startsWith(',')) return
+
   const value = event.target.value
   choiceInput.classList.add('choice__input-active')
   choiceInput.textContent = value
@@ -12,8 +14,6 @@ areaElement.addEventListener('keyup', (event) => {
     createChoice(value)
     clearChoiceInput()
   }
-
-  if (value.startsWith(',')) return
 
   if (event.target.value.includes(',')) {
     createChoice(value)
