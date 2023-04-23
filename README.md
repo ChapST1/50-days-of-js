@@ -15,6 +15,7 @@
 | 10  | [Dad Jokes](https://github.com/ChapST1/50-days-of-js/tree/master/day-10)                             | [Live Demo](https://chapst1.github.io/50-days-of-js/day-10/)               |      |
 | 11  | [Event KeyCodes](https://github.com/ChapST1/50-days-of-js/tree/master/day-11)                             | [Live Demo](https://chapst1.github.io/50-days-of-js/day-11/)               |      |
 | 12  | [Faq Collapse](https://github.com/ChapST1/50-days-of-js/tree/master/day-12)                             | [Live Demo](https://chapst1.github.io/50-days-of-js/day-12/)               |      |
+| 13  | [Faq Collapse](https://github.com/ChapST1/50-days-of-js/tree/master/day-13)                             | [Live Demo](https://chapst1.github.io/50-days-of-js/day-13/)               |      |
 
 
 
