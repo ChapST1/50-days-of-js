@@ -117,3 +117,11 @@ body{
     }
     
 }
+
+@media(max-width: 700px){
+    
+    .navigation-active .ul{
+        width: 280px;
+    }
+    
+}
