@@ -88,10 +88,10 @@ body{
 
 }
 @media (max-width:700px){
-    body{
-        --width:90%
-    }
-    .app__title{
-        font-size: 15px;
-    }
+        body{
+            --width:90%
+        }
+        .app__title{
+            font-size: 15px;
+        }
 }
