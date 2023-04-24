@@ -4,6 +4,7 @@ const { active, winner } = choicesRules
 
 export function createChoice (value) {
   const div = document.createElement('div')
+
   div.classList.add('choice')
   div.textContent = value
   choiceContainer.appendChild(div)

@@ -15,6 +15,7 @@ textArea.addEventListener('keyup', (event) => {
 
   value.forEach(choiceValue => {
     if (choiceValue.startsWith(',') || choiceValue.trim() === '') return
+
     createChoice(choiceValue)
   })
 })
