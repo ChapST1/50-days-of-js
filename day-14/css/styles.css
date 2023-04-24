@@ -89,11 +89,11 @@ body{
     transform: translateY(4px);
 }
 .menu-active::after{
-    animation: rotateSpanUp .1s forwards  linear ;
+    animation: rotateSpanUp .2s forwards  linear ;
     animation-iteration-count: 2;
 }
 .menu-active::before{
-    animation: rotateSpanDown .1s forwards  linear ;
+    animation: rotateSpanDown .2s forwards  linear ;
     animation-iteration-count :2;
 }
 
