@@ -1,7 +1,8 @@
-# Day  *12* of 50 ✅
+# Day  *13* of 50 ✅
 
-* ## Faq Collapse
+* ## Random Choice Picker
 
- [Demo → ](https://chapst1.github.io/50-days-of-js/day-12/)
+ [Demo → ](https://chapst1.github.io/50-days-of-js/day-13/)
 
 ![Primer Diseno](./screenshot/1.png)
+![Primer Diseno](./screenshot/2.png)
