@@ -79,6 +79,7 @@ body{
     background-color: var(--bg-100);
     position: absolute;
     transition: .5s;
+    border-radius: 3px;
 }
 /* click click */
 .menu::before{
@@ -88,20 +89,31 @@ body{
     transform: translateY(4px);
 }
 .menu-active::after{
-    animation: rotateSpanDown .1s forwards  linear alternate;
-    animation-iteration-count: 3;
+    animation: rotateSpanUp .1s forwards  linear ;
+    animation-iteration-count: 2;
 }
 .menu-active::before{
-    animation: rotateSpanUp .1s forwards  linear alternate;
-    animation-iteration-count: 3;
+    animation: rotateSpanDown .1s forwards  linear ;
+    animation-iteration-count :2;
 }
 
 @keyframes rotateSpanUp {
-    to{
-        transform: rotate(0deg);
-
-    }
     from{
         transform: rotate(180deg);
+
     }
+    to{
+        transform: rotate(45deg);
+    }
+    
+}
+@keyframes rotateSpanDown {
+    from{
+        transform: rotate(-180deg);
+
+    }
+    to{
+        transform: rotate(-45deg);
+    }
+    
 }
