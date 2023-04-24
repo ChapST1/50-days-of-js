@@ -1,0 +1,87 @@
+:root {
+    --primary-200: #61300D;
+    --primary-300: #E68946;
+    --text-100: #000000;
+    --text-200: #817a73;
+    --bg-100: #f7e1b8;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-100);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__icon {
+    color: var(--primary-200);
+    margin-bottom: 20px;
+}
+
+.card__counter {
+    color: var(--text-100);
+    font-size: 60px;
+}
+
+.card__info {
+    color: var(--text-200);
+    font-size: 20px;
+}
+
+.endNumber {
+    color: var(--primary-300);
+    animation: animateNumber 1s forwards cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@keyframes animateNumber {
+    from {
+        transform: scale(1.2);
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+
+@media(max-width: 700px) {
+    body{
+        height: auto;
+    }
+    #app{
+        
+        padding: 40px 0;
+    }
+
+}

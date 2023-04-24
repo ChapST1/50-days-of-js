@@ -17,6 +17,7 @@
 | 12  | [Faq Collapse](https://github.com/ChapST1/50-days-of-js/tree/master/day-12)                             | [Live Demo](https://chapst1.github.io/50-days-of-js/day-12/)               |      |
 | 13  | [Random Choice Picker](https://github.com/ChapST1/50-days-of-js/tree/master/day-13)                             | [Live Demo](https://chapst1.github.io/50-days-of-js/day-13/)               |      |
 | 14  | [Animated Navigation](https://github.com/ChapST1/50-days-of-js/tree/master/day-14)                             | [Live Demo](https://chapst1.github.io/50-days-of-js/day-14/)               |      |
+| 15  | [Incrementing Counter](https://github.com/ChapST1/50-days-of-js/tree/master/day-15)                             | [Live Demo](https://chapst1.github.io/50-days-of-js/day-15/)               |      |
 
 
 
