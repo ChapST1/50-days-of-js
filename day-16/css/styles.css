@@ -1,0 +1,98 @@
+:root {
+    --primary-100:#26A69A;/* border */
+    --primary-200:#408d86;
+    --primary-300:#cdfaf6;
+    --accent-100:#80CBC4;
+    --accent-200:#43A49B; /* water */
+    --text-100:#263339;
+    --text-200:#728f9e;
+    --bg-100:#E0F2F1;
+    --bg-200:#D0EBEA;
+    --bg-300:#FFFFFF;
+      
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-100);
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 0;
+}
+.app__title,.app__subtitle{
+    text-align: center;
+    padding: 5px 0;
+}
+
+.app__bottle,.bottles__mini{
+    width: 130px;
+    height:250px;
+    margin: 0 auto;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border: 3px solid var(--primary-200);
+    overflow: hidden;
+}
+
+.liters{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+.water{
+    width: 100%;
+    background-color: var(--accent-200);
+    height: 100%;
+}
+
+/* bottles */
+.bottles__container{
+    width: 300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4,40px);
+    justify-content: center;
+    gap: 10px;
+}
+.bottles__title{
+    text-align: center;
+    margin: 25px 0;
+}
+
+.bottles__mini{
+    width: 40px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    user-select: none;
+    cursor: pointer;
+    text-align: center;
+    transition: .5s;
+}
+.active{
+    background-color: var(--accent-200);
+}
+@media(max-width: 700px) {
+    body{
+        height: auto;
+    }
+    #app{
+        
+        padding: 40px 0;
+    }
+
+}

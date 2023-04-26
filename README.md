@@ -18,6 +18,7 @@
 | 13  | [Random Choice Picker](https://github.com/ChapST1/50-days-of-js/tree/master/day-13)                             | [Live Demo](https://chapst1.github.io/50-days-of-js/day-13/)               |      |
 | 14  | [Animated Navigation](https://github.com/ChapST1/50-days-of-js/tree/master/day-14)                             | [Live Demo](https://chapst1.github.io/50-days-of-js/day-14/)               |      |
 | 15  | [Incrementing Counter](https://github.com/ChapST1/50-days-of-js/tree/master/day-15)                             | [Live Demo](https://chapst1.github.io/50-days-of-js/day-15/)               |      |
+| 16  | [Drink Water](https://github.com/ChapST1/50-days-of-js/tree/master/day-16)                             | [Live Demo](https://chapst1.github.io/50-days-of-js/day-16/)               |      |
 
 
 
