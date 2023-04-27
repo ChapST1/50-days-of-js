@@ -1,0 +1,80 @@
+:root {
+    --primary-100:#ED8D8D;
+    --primary-200:#CFB997;
+    --primary-300:#fdf6fd;
+    --accent-100:#6f8aa1;
+    --accent-200:#9eb2c2;
+    --text-100:#EEEEEE;
+    --text-200:#FDEBED;
+    --bg-100:#393232;
+    --bg-200:#8D6262;
+    --bg-300:#4D4545;
+      
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-100);
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 10px;
+}
+.header{
+    width: 100%;
+    height: 70px;
+    background-color: var(--bg-300);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 20px;
+}
+
+.form{
+    
+}
+
+.form__input{
+    padding: 14px 5px;
+    width: 330px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    background-color: var(--bg-100);
+    color: var(--text-100);
+}
+.movies-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 15px;
+    padding: 15px;
+}
+.movie__item{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.movie__poster{
+    width: 100%;
+    height: 100%;
+
+}
+.app__btn-more{
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--primary-100);
+}
