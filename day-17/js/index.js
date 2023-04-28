@@ -1,6 +1,6 @@
 import { ALL_MOVIES_API_URL, API_URL, GET_MOVIE_API_URL, SEARCH_API, initUrlPoster } from './API/constants/index.js'
 import { useFetch, getMovies } from './API/functions/index.js'
-import { showMovies, loadMoreMovies, goHome, changeRoute, searchMovie, getKeywordToLocalStorage, saveKeywordToLocalStorage } from './functions/index.js'
+import { showMovies, loadMoreMovies, goHome, changeRoute, searchMovie, getKeywordToLocalStorage, saveKeywordToLocalStorage, showMovieVideoInModal, showDataInModal, mutationObserver } from './functions/index.js'
 import { modal, form, btnMore, goBackButton, moviesContainer, pathValues } from './constants/index.js'
 
 let page = 1
@@ -52,72 +52,7 @@ modal.addEventListener('click', () => {
   modal.classList.remove('modal-active')
   document.documentElement.style.overflowY = 'scroll'
 })
-// TODO: AL ENTRAR A LA URL DESDE OTRA PESTANIA VERIFICAR SI TIENE EN LA RUTA SEARCH, SI ES ASI QUE BUSQUE DIRECTAMENTE LA PELICULA
-function openModal (allMovies) {
-  allMovies.forEach(movie => {
-    movie.addEventListener('click', () => {
-      document.documentElement.style.overflowY = 'hidden'
-      modal.classList.add('modal-active')
 
-      const movieId = Number(movie.getAttribute('id'))
-      showDataInModal(movieId)
-    })
-  })
-}
+function modalVideo () {
 
-function mutationObserver () {
-  const mutations = new window.MutationObserver((mutations) => {
-    const { addedNodes } = mutations[0]
-    openModal(addedNodes)
-  })
-
-  const config = { attributes: true, childList: true, characterData: true }
-
-  mutations.observe(moviesContainer, config)
-}
-
-async function getMovieInfo (id) {
-  const urlApi = `${GET_MOVIE_API_URL}${id}`
-  const movie = await useFetch(urlApi)
-  return movie
-}
-
-async function showDataInModal (id) {
-  const movieInfo = await getMovieInfo(id)
-  console.log(movieInfo)
-  modal.innerHTML = `
-    <div class="modal__image image">
-      <img src="${initUrlPoster}${movieInfo.poster_path}" alt="${movieInfo.original_title} poster" class="image__poster"/>
-    </div>
-    <div class="modal__info info">
-      <h2 class="info__title">${movieInfo.original_title}</h2>
-      <p class="info__paragraph">${movieInfo.overview}</p>
-    </div>
-    `
-  showMovieVideoInModal(id)
-}
-
-async function getMovieVideos (id) {
-  const url = `${GET_MOVIE_API_URL}${id}/videos`
-  const data = await useFetch(url)
-  return data
-}
-
-async function showMovieVideoInModal (id) {
-  const infoElement = document.querySelector('.info')
-  const fragment = document.createDocumentFragment()
-  const { results } = await getMovieVideos(id)
-
-  console.log(results)
-
-  results.map((video) => {
-    const { key, id } = video
-    const element = document.createElement('video')
-    const urlVideo = `https://www.themoviedb.org/video/play?key=${key}&width=698&height=392&_=${id}`
-    element.setAttribute('src', urlVideo)
-    element.setAttribute('controls', true)
-
-    return fragment.append(element)
-  })
-  infoElement.appendChild(fragment)
 }

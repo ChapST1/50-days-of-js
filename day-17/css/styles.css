@@ -111,6 +111,7 @@ body {
 .info{
     width: 100%;
     padding: 15px;
+    overflow-y: scroll;
 }
 .info__title{
     color: var(--text-100);
@@ -122,6 +123,25 @@ body {
     margin: 0 auto;
     text-align: center;
 }
+
+.movies__container{
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    gap: 10px;
+}
+.videos__item{
+    padding: 10px;
+    background-color: var(--bg-300);
+}
+.videos__poster{
+    display: block;
+    width: 300px;
+}
+/* modal-video */
+
+
+
 .modal-active{
     transform: translateY(0%);
     opacity: 1;
