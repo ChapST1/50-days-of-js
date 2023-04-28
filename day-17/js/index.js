@@ -1,7 +1,9 @@
 import { ALL_MOVIES_API_URL, API_URL, GET_MOVIE_API_URL, SEARCH_API, initUrlPoster } from './API/constants/index.js'
 import { useFetch, getMovies } from './API/functions/index.js'
-import { showMovies, loadMoreMovies, goHome, changeRoute, searchMovie, getKeywordToLocalStorage, saveKeywordToLocalStorage, showMovieVideoInModal, showDataInModal, mutationObserver } from './functions/index.js'
+import { showMovies, loadMoreMovies, goHome, searchMovie, showMovieVideoInModal, showDataInModal } from './functions/index.js'
 import { modal, form, btnMore, goBackButton, moviesContainer, pathValues } from './constants/index.js'
+import { mutationObserver, saveKeywordToLocalStorage, getKeywordToLocalStorage } from './utils/index.js'
+import { changeRoute } from './routes/index.js'
 
 let page = 1
 
@@ -48,11 +50,7 @@ goBackButton.addEventListener('click', () => {
   goHome()
 })
 
-modal.addEventListener('click', () => {
-  modal.classList.remove('modal-active')
-  document.documentElement.style.overflowY = 'scroll'
-})
-
-function modalVideo () {
-
-}
+// modal.addEventListener('click', () => {
+//   modal.classList.remove('modal-active')
+//   document.documentElement.style.overflowY = 'scroll'
+// })
