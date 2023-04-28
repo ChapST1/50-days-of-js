@@ -1,5 +1,5 @@
-import { ALL_MOVIES_API_URL, SEARCH_API, initUrlPoster } from './API/constants/index.js'
-import { getMovie, getMovies } from './API/functions/index.js'
+import { ALL_MOVIES_API_URL, API_URL, GET_MOVIE_API_URL, SEARCH_API, initUrlPoster } from './API/constants/index.js'
+import { useFetch, getMovies } from './API/functions/index.js'
 import { showMovies, loadMoreMovies, goHome, changeRoute, searchMovie, getKeywordToLocalStorage, saveKeywordToLocalStorage } from './functions/index.js'
 import { modal, form, btnMore, goBackButton, moviesContainer, pathValues } from './constants/index.js'
 
@@ -77,7 +77,8 @@ function mutationObserver () {
 }
 
 async function getMovieInfo (id) {
-  const movie = await getMovie(id)
+  const urlApi = `${GET_MOVIE_API_URL}${id}`
+  const movie = await useFetch(urlApi)
   return movie
 }
 
@@ -93,4 +94,30 @@ async function showDataInModal (id) {
       <p class="info__paragraph">${movieInfo.overview}</p>
     </div>
     `
+  showMovieVideoInModal(id)
+}
+
+async function getMovieVideos (id) {
+  const url = `${GET_MOVIE_API_URL}${id}/videos`
+  const data = await useFetch(url)
+  return data
+}
+
+async function showMovieVideoInModal (id) {
+  const infoElement = document.querySelector('.info')
+  const fragment = document.createDocumentFragment()
+  const { results } = await getMovieVideos(id)
+
+  console.log(results)
+
+  results.map((video) => {
+    const { key, id } = video
+    const element = document.createElement('video')
+    const urlVideo = `https://www.themoviedb.org/video/play?key=${key}&width=698&height=392&_=${id}`
+    element.setAttribute('src', urlVideo)
+    element.setAttribute('controls', true)
+
+    return fragment.append(element)
+  })
+  infoElement.appendChild(fragment)
 }
