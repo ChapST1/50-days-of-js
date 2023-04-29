@@ -1,5 +1,5 @@
 import { openModal } from '../functions/index.js'
-import { moviesContainer } from '../constants/index.js'
+import { btnFullScreen, moviesContainer, screenValues } from '../constants/index.js'
 
 // ---------------------------------- Observador de mutacion ----------------------------------------
 
@@ -33,4 +33,20 @@ export function getKeywordToLocalStorage () {
 
 export function cleanContainer (element) {
   element.innerHTML = ''
+}
+
+// ---------------------------------- Activar em modo pantalla completa ----------------------------------------
+
+export function enableFullScreen () {
+  if (document.fullscreenElement) {
+    const newIcon = btnFullScreen.classList.value.replace(screenValues.inside, screenValues.outside)
+
+    btnFullScreen.classList = newIcon
+    document.exitFullscreen()
+    return
+  }
+
+  const newIcon = btnFullScreen.classList.value.replace(screenValues.outside, screenValues.inside)
+  btnFullScreen.classList = newIcon
+  document.documentElement.requestFullscreen()
 }

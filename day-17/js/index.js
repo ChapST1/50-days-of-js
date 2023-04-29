@@ -21,13 +21,15 @@ import {
   btnMore,
   btnFullScreen,
   goBackButton,
-  pathValues
+  pathValues,
+  screenValues
 } from './constants/index.js'
 
 import {
   mutationObserver,
   saveKeywordToLocalStorage,
-  getKeywordToLocalStorage
+  getKeywordToLocalStorage,
+  enableFullScreen
 } from './utils/index.js'
 
 import { changeRoute } from './routes/index.js'
@@ -82,10 +84,13 @@ btnMore.addEventListener('click', async () => {
 
 // ---------------------------------- Pantalla completa ----------------------------------------
 
-btnFullScreen.addEventListener('click', () => {
-  document.documentElement.requestFullscreen()
-})
+btnFullScreen.addEventListener('click', () => enableFullScreen())
 
 goBackButton.addEventListener('click', () => {
   goHome()
+})
+
+document.querySelector('.modal').addEventListener('click', () => {
+  document.querySelector('.modal').classList.remove('modal-active')
+  document.documentElement.style.overflowY = 'scroll'
 })

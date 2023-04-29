@@ -5,8 +5,13 @@ export const form = document.querySelector('.form')
 export const modal = document.querySelector('.modal')
 
 export const goBackButton = document.querySelector('.come-back')
-export const btnFullScreen = document.querySelector('.full-screen')
 export const pathValues = {
   default: '/day-17/',
   search: '/search'
+}
+
+export const btnFullScreen = document.querySelector('.full-screen')
+export const screenValues = {
+  inside: 'fa-compress',
+  outside: 'fa-expand'
 }
