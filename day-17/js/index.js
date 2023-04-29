@@ -1,56 +1,91 @@
-import { ALL_MOVIES_API_URL, API_URL, GET_MOVIE_API_URL, SEARCH_API, initUrlPoster } from './API/constants/index.js'
-import { useFetch, getMovies } from './API/functions/index.js'
-import { showMovies, loadMoreMovies, goHome, searchMovie, showMovieVideoInModal, showDataInModal } from './functions/index.js'
-import { modal, form, btnMore, goBackButton, moviesContainer, pathValues } from './constants/index.js'
-import { mutationObserver, saveKeywordToLocalStorage, getKeywordToLocalStorage } from './utils/index.js'
+// ---------------------------------- Imports ----------------------------------------
+
+import {
+  POPULAR_MOVIES_API_URL,
+  SEARCH_API_URL
+} from './API/constants/index.js'
+
+import {
+  getMovies
+} from './API/functions/index.js'
+
+import {
+  showMovies,
+  loadMoreMovies,
+  goHome,
+  searchMovie
+} from './functions/index.js'
+
+import {
+  form,
+  btnMore,
+  btnFullScreen,
+  goBackButton,
+  pathValues
+} from './constants/index.js'
+
+import {
+  mutationObserver,
+  saveKeywordToLocalStorage,
+  getKeywordToLocalStorage
+} from './utils/index.js'
+
 import { changeRoute } from './routes/index.js'
+
+// ---------------------------------- Init code  ----------------------------------------
 
 let page = 1
 
+// ---------------------------------- Cuando la pgina termine de cargar  ----------------------------------------
+
 window.addEventListener('load', async () => {
   mutationObserver()
-  const { results } = await getMovies(ALL_MOVIES_API_URL, 1)
-  console.log(results)
+
+  const { results } = await getMovies(POPULAR_MOVIES_API_URL, 1)
   showMovies(results)
 })
 
+// ---------------------------------- Al hacer la busqueda  ----------------------------------------
+
 form.addEventListener('submit', async (event) => {
-  mutationObserver()
   event.preventDefault()
-  page = 1
+  mutationObserver()
   const data = new FormData(event.target)
   const keyword = data.get('search')
   const route = `/search/${keyword}`
+  page = 1
+
   saveKeywordToLocalStorage(keyword)
   changeRoute(route)
   searchMovie(keyword, page)
 })
+
+// ---------------------------------- Agregar mas peliculas  ----------------------------------------
 
 btnMore.addEventListener('click', async () => {
   const { pathname } = window.location
 
   if (pathname === pathValues.default) {
     page++
-    loadMoreMovies(ALL_MOVIES_API_URL, page)
+
+    loadMoreMovies(POPULAR_MOVIES_API_URL, page)
   }
 
   if (pathname.includes(pathValues.search)) {
     page++
     const currentKeyword = getKeywordToLocalStorage()
-    const url = `${SEARCH_API}${currentKeyword}`
+    const url = `${SEARCH_API_URL}${currentKeyword}`
+
     loadMoreMovies(url, page)
   }
 })
 
-document.querySelector('.full-screen').addEventListener('click', () => {
+// ---------------------------------- Pantalla completa ----------------------------------------
+
+btnFullScreen.addEventListener('click', () => {
   document.documentElement.requestFullscreen()
 })
 
 goBackButton.addEventListener('click', () => {
   goHome()
 })
-
-// modal.addEventListener('click', () => {
-//   modal.classList.remove('modal-active')
-//   document.documentElement.style.overflowY = 'scroll'
-// })

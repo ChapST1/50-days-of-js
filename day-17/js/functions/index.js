@@ -1,13 +1,37 @@
-import { moviesContainer, fragment, form, pathValues, modal } from '../constants/index.js'
-import { getMovies, useFetch } from '../API/functions/index.js'
-import { initUrlPoster, ALL_MOVIES_API_URL, SEARCH_API, GET_MOVIE_API_URL } from '../API/constants/index.js'
-import { cleanContainer } from '../utils/index.js'
-import { changeRoute } from '../routes/index.js'
+// ---------------------------------- Imports ----------------------------------------
+
+import {
+  moviesContainer,
+  fragment,
+  form,
+  pathValues,
+  modal
+} from '../constants/index.js'
+
+import {
+  getMovies,
+  useFetch
+} from '../API/functions/index.js'
+
+import {
+  POPULAR_MOVIES_API_URL,
+  SEARCH_API_URL,
+  GET_MOVIE_API_URL,
+  initUrlPoster
+} from '../API/constants/index.js'
+
+import {
+  cleanContainer
+} from '../utils/index.js'
+
+import {
+  changeRoute
+} from '../routes/index.js'
 
 // ---------------------------------- Buscar pelicula ----------------------------------------
 
 export async function searchMovie (keyword, page) {
-  const { results } = await getMovies(`${SEARCH_API}${keyword}`, page)
+  const { results } = await getMovies(`${SEARCH_API_URL}${keyword}`, page)
   cleanContainer(moviesContainer)
   showMovies(results)
 }
@@ -40,7 +64,7 @@ export async function goHome () {
   resetInputSearch()
   cleanContainer(moviesContainer)
 
-  const { results } = await getMovies(ALL_MOVIES_API_URL, 1)
+  const { results } = await getMovies(POPULAR_MOVIES_API_URL, 1)
   showMovies(results)
 }
 
@@ -135,6 +159,7 @@ function openModalVideo () {
   allPosterVideos.forEach((video) => {
     video.addEventListener('click', () => {
       modal.classList.add('movies__modal-active')
+
       const key = video.getAttribute('data-key')
       const id = video.getAttribute('data-id')
       const urlVideo = `https://www.themoviedb.org/video/play?key=${key}&width=698&height=392&_=${id}`
