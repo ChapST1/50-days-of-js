@@ -21,8 +21,7 @@ import {
   btnMore,
   btnFullScreen,
   goBackButton,
-  pathValues,
-  screenValues
+  pathValues
 } from './constants/index.js'
 
 import {
@@ -69,7 +68,6 @@ btnMore.addEventListener('click', async () => {
 
   if (pathname === pathValues.default) {
     page++
-
     loadMoreMovies(POPULAR_MOVIES_API_URL, page)
   }
 
@@ -88,9 +86,4 @@ btnFullScreen.addEventListener('click', () => enableFullScreen())
 
 goBackButton.addEventListener('click', () => {
   goHome()
-})
-
-document.querySelector('.modal').addEventListener('click', () => {
-  document.querySelector('.modal').classList.remove('modal-active')
-  document.documentElement.style.overflowY = 'scroll'
 })

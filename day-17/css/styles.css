@@ -80,7 +80,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .come-back,
-.full-screen {
+.full-screen,
+.info__button-trailer {
     padding: 10px 20px;
     border: none;
     outline: none;
@@ -153,17 +154,24 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     padding: 15px;
     overflow-y: scroll;
+    position: relative;
 }
-
+.movies__close-modal{
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+}
 .info__title {
-    color: var(--text-100);
-    text-align: center;
+    color: var(--text-200);
+    text-align: left;
 }
 
 .info__paragraph {
-    width: 90%;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
+    color: var(--text-300);
 }
 
 .movies__container {
@@ -171,6 +179,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     overflow-x: scroll;
     gap: 10px;
+    display: none;
 }
 
 .videos__item {

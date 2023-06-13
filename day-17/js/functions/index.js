@@ -5,7 +5,8 @@ import {
   fragment,
   form,
   pathValues,
-  modal
+  modal,
+  modalCloseBtn
 } from '../constants/index.js'
 
 import {
@@ -112,8 +113,10 @@ export async function showDataInModal (id) {
     <div class="modal__info info">
       <h2 class="info__title">${movieInfo.original_title}</h2>
       <p class="info__paragraph">${movieInfo.overview}</p>
+      <button class="info__button-trailer">See Trailer</button>
       <div class="info__movies movies">
-        <h1>Videos</h1>
+        <i class="fa-regular fa-circle-xmark movies__close-modal"></i>
+        <h3>Videos</h3>
         <div class="movies__container"></div>
         <div class="movies__modal modal">
           <iframe src"" class="modal__iframe"></iframe>
@@ -122,6 +125,7 @@ export async function showDataInModal (id) {
     </div>
     `
   showMovieVideoInModal(id)
+  closeModal()
 }
 
 export async function showMovieVideoInModal (id) {
@@ -130,7 +134,7 @@ export async function showMovieVideoInModal (id) {
   const moviesContainer = document.querySelector('.movies__container')
   const fragment = document.createDocumentFragment()
 
-  results.map((video) => {
+  results.reverse().map((video) => {
     const { key, id } = video
     const element = document.createElement('div')
 
@@ -145,6 +149,17 @@ export async function showMovieVideoInModal (id) {
   })
   moviesContainer.appendChild(fragment)
   openModalVideo()
+}
+
+export function closeModal () {
+  setTimeout(() => {
+    const closeBtn = document.querySelector('.movies__close-modal')
+
+    closeBtn.addEventListener('click', () => {
+      document.documentElement.style.overflowY = 'scroll'
+      modal.classList.remove('modal-active')
+    })
+  }, 1000)
 }
 
 // ---------------------------------- Modal videos ----------------------------------------
@@ -165,6 +180,20 @@ function openModalVideo () {
       const urlVideo = `https://www.themoviedb.org/video/play?key=${key}&width=698&height=392&_=${id}`
 
       modalIframe.setAttribute('src', urlVideo)
+      closeModalVideos(modal, modalIframe)
     })
   })
+}
+
+function closeModalVideos (modalElement, iframe) {
+  modalElement.addEventListener('click', (event) => {
+    if (modalElement === event.target) {
+      modalElement.classList.remove('movies__modal-active')
+      resetVideoInModalVideo(iframe)
+    }
+  })
+}
+
+function resetVideoInModalVideo (iframe) {
+  iframe.removeAttribute('src')
 }

@@ -3,6 +3,7 @@ export const moviesContainer = document.querySelector('.movies-container')
 export const btnMore = document.querySelector('.app__btn-more')
 export const form = document.querySelector('.form')
 export const modal = document.querySelector('.modal')
+export const modalCloseBtn = document.querySelector('.movies__close-modal')
 
 export const goBackButton = document.querySelector('.come-back')
 export const pathValues = {
