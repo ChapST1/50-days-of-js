@@ -1,6 +1,6 @@
 # Day  *17* of 50 ✅
 
-* ## Drink Water
+* ## Movie app
 
  [Demo → ](https://chapst1.github.io/50-days-of-js/day-17/)
 
